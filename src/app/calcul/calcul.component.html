@@ -1,0 +1,10 @@
+<h1>Operations d calcul</h1>
+<div>
+    Donner premier nombre :
+    <input type="text" #input1 (keyup)="onKeyUp($event)" > 
+    <br>le carre est: {{carre}}
+    <br>Donner le deuxieme nombre :
+    <input type="text" #input2 (keyup)=0 >
+    <br> <button (click)="onSomme(input1.value,input2.value)" [disabled]="input1.value=='' || input2.value==''"    >Somme</button>
+    <br> le somme est {{somme}}
+</div>

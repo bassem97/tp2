@@ -1,0 +1,29 @@
+
+<div>
+    <div class="PARTIE1 "> 
+        <h1>PARTIE I </h1>
+        <h2> Bonjour {{nom}}</h2>
+        <h3>le taille de votre nom est: {{taille()}}</h3>
+        <h3>votre nom en majuscules est : {{majus()}}</h3>
+        <h3> {{infos()}}</h3>
+    </div>
+    <div class="PARTIE2">
+        <h1>PARTIE II</h1>
+        <input type="text" [value]="nom" [disabled]="actif">
+        <button bind-disabled="!actif" (click)="onAfficher()">Afficher</button>
+    </div>
+    <div class="PARTIE3">
+        <h1>PARTIE III</h1>
+        <input type ="text" (keyup.enter)="onKeyUp($event)">
+        <h4>{{contenu}}</h4>
+        <input type ="text" #textbox /> 
+         <button (click)="onAfficherContenu(textbox.value)">Afficher</button>
+    </div>
+    <div class="PARTIE4">
+        <h1>PARTIE IV</h1>
+        <input type="text" [(ngModel)]="message">
+        <h3>{{message}}</h3>
+    </div>
+
+</div>
+    
